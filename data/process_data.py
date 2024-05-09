@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 
 
 def load_data(messages_filepath, categories_filepath):
-     """
+    """
     INPUT:
     messages_filepath - the file path for messages.csv
     categories_filepath - the file path for categories.csv
