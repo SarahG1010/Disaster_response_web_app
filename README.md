@@ -1,4 +1,4 @@
-# Disaster_response_web_app
+# Disaster Response Web App
 A web application for classifiy disaster related message. There are 36 categories. 
 
 ### Description
@@ -34,3 +34,16 @@ The app contains the files to deploy the web App.
 3. Run your web app: `python run.py`
 
 Note: You need to have a localhost or a website to deploy the project.
+
+### Practical impact and benefits of the Web App
+This application has the potential to make a significant positive impact on the community by 
+enhancing preparedness, response, and recovery efforts, ultimately helping to save lives, protect property, 
+and build resilience in the face of disasters. It can have a significant positive impact on the community and 
+help both individuals and organizations in several ways:
+
+1. Early Detection and Response
+2. Resource Allocation
+3. Enhanced Situational Awareness
+4. Community Engagement and Preparedness
+5. Coordination and Collaboration
+6. Post-Disaster Recovery and Reconstruction
