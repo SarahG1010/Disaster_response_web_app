@@ -43,6 +43,19 @@ def index():
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
+    # create data for 2nd plot
+    cate = {}
+    for column in df.iloc[:,4:].columns:
+        cate[column]=df[column].sum()
+    x = list(cate.keys())
+    y = list(cate.values())
+    df_plot = pd.DataFrame({'categories':x, 'count': y})
+    df_plot = df_plot.sort_values(by = 'count', ascending = False)
+    df_plot = df_plot.reset_index().drop(columns = 'index')
+    df_top10 = df_plot.iloc[:10,:]
+    cate_names= list(df_top10['categories'].values)
+    cate_count= list(df_top10['count'].values)
+    
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
@@ -61,6 +74,24 @@ def index():
                 },
                 'xaxis': {
                     'title': "Genre"
+                }
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    x=cate_names,
+                    y=cate_count
+                )
+            ],
+
+            'layout': {
+                'title': 'Top 10 categories of disaster messages',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Categories"
                 }
             }
         }
